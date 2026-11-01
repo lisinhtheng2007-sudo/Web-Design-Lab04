@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasboard</title>
+     <style>
+        body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+}
+.dashboard{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  }
+.left-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding:2em;
+}
+
+.right-sidebar {
+  background-color: white;
+  padding: 2em;
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+
+.menu {
+  margin-top: 2em;        
+  margin-left: 0.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.menu p {
+    display: flex;
+    color: black;
+    gap: 5em;
+    text-align: center;
+    padding: 1em;
+    background-color: #7e86a2;
+    border-radius: 0.8em;
+}
+
+
+.upgrade {
+    margin-top: auto;        
+    padding: 1.2em;
+    border-radius: 1em;
+    background-color: #7e86a2;
+    text-align: center;
+    font-size: 13px;
+    color:black;
+}
+
+button{
+  background-color: #82515b;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+
+
+.main{
+    background-color: #50628e;
+    padding: 3em;
+}
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5em;
+}
+
+.welcome{
+    background-color: #82515b;
+    padding: 2.5em;
+    border-radius:1.5em;
+    margin-bottom: 2.5em;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5em;
+}
+
+.card {
+    background-color: white;
+    padding: 2em;
+    border-radius: 1.5em;
+}
+
+.card p {
+    color: #858ba0;
+    font-size: 14px;
+}
+.card h3 {
+    font-size: 28px;
+}
+
+.results-card {
+  background-color: white;
+  margin-top: 2.5em;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.result-row {
+    display: flex;                       
+    gap: 1em;
+    padding: 1em;
+    border-top: 1px solid #e4e7f1;      
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.course{
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+
+.logout{
+  display: flex;
+  justify-content: space-between;
+}
+.me{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5em;
+}
+.status{
+    background-color: rgb(101, 93, 175);
+    padding: 1.2em 1.8em;
+    border-radius: 1em;
+    text-align: center;
+}
+.lang-row {
+    display: flex;                          
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-top: 2em ;
+}
+
+.lang-badge {
+  background-color: #f4f6fb;
+  padding: 0.8em;
+  border-radius: 0.8em;
+}
+
+
+.reminder-row {
+    margin-top: 1.2em;
+    font-size: 14px;
+}
+.note {
+    font-size: 12px;
+    color: #858ba0;
+    margin-top: 0.5em;
+}
+
+@media (max-width: 900px) {
+    .dashboard,
+    .stats,
+    .courses {
+        grid-template-columns: 1fr;
+    }
+}
+     </style>
+  </head>
+
+  <body>
+    <div class="dashboard">
+
+      <aside class="left-sidebar">
+
+      <div class="logo">
+        <img src="logo.png" alt="logo">
+        <h2 style="color: #3d64c7;">LingLee</h2>
+      </div> 
+
+        <nav class="menu">
+          <p >Dashboard</p>
+          <p >Courses</p>
+          <p >Activity</p>
+          <p >Settings</p>
+        </nav>
+
+        <div class="upgrade">
+          <p>Upgrade to <b>PRO</b> for more resources.</p>
+          <button type="button">Upgrade</button>
+        </div>
+
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1>Dashboard</h1>
+            <p>Welcome back, Student!</p>
+          </div>
+        </header>
+
+
+
+        <section class="welcome">
+          <h2>Keep learning, keep growing!</h2>
+
+          <p>You're making progress toward your goals.</p>
+        </section>
+
+        <section class="stats">
+          
+          <div class="card">
+            <p>Total Courses</p>
+            <h3>6</h3>
+          </div>
+
+          <div class="card">
+            <p>Completed Tasks</p>
+            <h3>24</h3>
+          </div>
+
+          <div class="card">
+            <p>Study Hours</p>
+            <h3>38</h3>
+          </div>
+        </section>
+      
+        <section class="results-card">
+          <h2>Latest results</h2>
+ 
+          <div class="result-row">
+            <span>Technology</span>
+            <span>25</span>
+          </div>
+ 
+          <div class="result-row">
+            <span>Ecology</span>
+            <span>44</span>
+          </div>
+ 
+          <div class="result-row">
+            <span>Education</span>
+            <span>15</span>
+          </div>
+ 
+          <div class="result-row">
+            <span>Job market</span>
+            <span>76</span>
+          </div>
+        </section>
+
+        <h2 class="courses-title">Your courses</h2>
+ 
+        <section class="courses">
+          <div class="course" style="background-color: #82515b">Grammar</div>
+          <div class="course" style="background-color: #7e86a2">Phrasal verbs</div>
+          <div class="course" style="background-color: #3f4f78">Vocabulary</div>
+        </section>
+      </main>
+
+
+      </main>
+
+      <aside class="right-sidebar">
+        <div class="logout"><span>Logout</span> <span>➜</span></div>
+        <div class="me">
+          <div><img src="photo.jpg" alt="photo" width=100px></div>
+          <h3>Lisinh</h3>
+        </div>
+
+        <div class="status">Student</div>
+        <div class="lang-row">
+          <span class="lang-badge">B2</span>
+          <div>
+            <b>English</b>
+            <div class="note">intermediate</div>
+          </div>
+        </div>
+
+        <div class="lang-row">
+          <span class="lang-badge">C1</span>
+          <div>
+            <b>Khmer</b>
+            <div class="note">Native</div>
+          </div>
+        </div>
+
+        <div class="reminders-head"><h4>Reminders</h4></div>
+
+        <div class="reminder-row">
+          <b>Eng - Vocabulary test</b>
+          <div class="note">4 Nov 2026, Wednesday</div>
+        </div>
+
+        <div class="reminder-row">
+          <b>Eng - Send grammar homework</b>
+          <div class="note">6 Nov 2026, Friday</div>
+        </div>
+
+        <div class="reminder-row">
+          <b>Khmer - Send essay</b>
+          <div class="note">9 Nov 2026, Monday</div>
+        </div>
+      </aside>
+
+    </div>
+  </body>
+</html>
